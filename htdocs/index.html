@@ -22,10 +22,63 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
-  
+
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/jpg" href="images/boosted.jpg">
+  
+  <!-- Style
+  -->
+  <style media = "screen" type = "text/css">
+  /* Dropdown Button */
+  .dropbtn {
+      background-color: #222;
+      color: #f5f5f5;
+      font-size: 15px;
+      border: none;
+      cursor: pointer;
+      height: 27px;
+       }
+
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+      position: relative;
+      display: center;
+  }
+
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #222;
+      min-width: 85px;
+      font-size: 11px;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+      color: black;
+      padding: 8px 16px;
+      text-decoration: none;
+      display: inline-block;
+  }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+      background-color: #cc5500
+      padding-bottom: 0px;
+    }
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+      display: block;
+      width: relative;
+  }
+
+  </style>
+
+
+
 
 </head>
 <body>
@@ -46,25 +99,49 @@
   <nav class="primary">
     <ul>
           <li>
-               <a href="http://longhorngaming.org">Home</a>
+            <div class = "dropdown">
+              <button class = "dropbtn">Home</button>
+              </div>
           </li>
           <li>
-               <a href="#">Competitive</a>
+            <div class = "dropdown">
+              <button class = "dropbtn">Competitive</button>
+              <div class = "dropdown-content" style = "text-align: center">
+                  <a href = "#">Collegiate LOL</a>
+                  <a href = "#">League of Legends DCS</a>
+              </div>
+            </div>
+
           </li>
           <li>
-               <a href="#">Events</a>
+          <div class = "dropdown">
+              <button class = "dropbtn">Events</button>
+            </div>
            </li>
            <li>
-               <a href="#">Streams</a>
+            <div class = "dropdown">
+              <button class = "dropbtn">News</button>
+            </div>
+           <li>
+           <div class = "dropdown">
+              <button class = "dropbtn">Streams</button>
+              <div class = "dropdown-content" style = "text-align: center">
+                  <a href = "#">Featured Streams</a>
+                  <a href = "#">LG Competitive Streams</a>
+                  <a href = "#">Affiliated Streamers List</a>
+              </div>
+            </div>
            </li>
            <li>
-               <a href="#">Directors</a>
+            <div class = "dropdown">
+              <button class = "dropbtn">Directors</button>
+            </div>
            </li>
     </ul>
  </nav>
 
-   <div class="container">
-       <img src="images/banner.png" style="width:100%"></img>
+
+       <img src="images/banner.png" style="width:100%; z-index: 50"></img>
      </div>
 
    <div class="section info">

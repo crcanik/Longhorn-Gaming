@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Longhorn Gaming</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/skeleton.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/jpg" href="../images/boosted.jpg">
+
+</head>
+
+<body>
+  <script src="submit.js"></script>
+  <h1 style="text-align:center; padding-top:20px">DCS Match Submit Form</h1>
+  <form style="padding: 20px">
+    <div class="row">
+      <div class="six columns">
+        <label for="exampleRecipientInput">Division</label>
+        <select class="u-full-width" id="division" onchange = "chooseTeams();">
+          <option value="default">Select Division</option>
+          <option value="lower">Lower</option>
+          <option value="upper">Upper</option>
+        </select>
+        <label for="exampleRecipientInput">Score</label>
+        <select class="u-full-width" id="score">
+          <option value="default">Team 1:Team 2</option>
+          <option value="two zero">2:0</option>
+          <option value="one one">1:1</option>
+          <option value="zero two">0:2</option>
+        </select>
+      </div>
+      <div class="six columns">
+        <label for="exampleRecipientInput">Team 1</label>
+        <select class="u-full-width" id="teamOneName">
+          <option value="default">Choose Team</option>
+        </select>
+        <label for="exampleRecipientInput">Team 2</label>
+        <select class="u-full-width" id="teamTwoName">
+          <option value="default">Choose Team</option>
+        </select>
+      </div>
+    </div>
+    <label for="matchHistory1">Game 1 Match History</label>
+    <textarea class="u-full-width" placeholder="matchhistory.na.leagueoflegends.com/..." id="matchHistory1"></textarea><span id="errorMatch1"></span>
+    <label for="matchHistory2">Game 2 Match History</label>
+    <textarea class="u-full-width" placeholder="matchhistory.na.leagueoflegends.com/..." id="matchHistory2"></textarea><span id="errorMatch2"></span>
+    <input class="button-primary" type="submit" value="Submit" id="submit" onclick="prepData();"/>
+  </form>
+    
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
+										
